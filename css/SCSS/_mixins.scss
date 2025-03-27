@@ -1,0 +1,6 @@
+// css/SCSS/partials/_mixins.scss
+@mixin mobile-styles {
+    @media (max-width: 768px) {
+        @content;
+    }
+}

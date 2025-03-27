@@ -1,0 +1,283 @@
+// css/SCSS/style.scss
+@use "../css/SCSS/variables" as variables;
+@use "../css/SCSS/mixins" as mixins;
+@use 'sass:color';
+
+/* Estilos Generales */
+html {
+    height: 100%;
+}
+
+body {
+    font-family: variables.$font-family;
+    color: variables.$dark-gray;
+    background-color: variables.$light-gray;
+    margin: 0;
+    min-height: 100%;
+    padding-bottom: 60px;
+    padding-top: 60px;
+}
+
+main {
+    flex: 1;
+}
+
+/* Estilos para el header*/
+/* Estilos para la Navbar*/
+
+.header {
+    .navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        background-image: linear-gradient(to left, #5d5b5f, #ffffff);
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: variables.$font-size-nav-brand;
+    text-shadow: variables.$text-shadow;
+}
+
+.navbar-nav {
+    .nav-link {
+        margin-left: 15px;
+        color: variables.$navbar-link-color;
+
+        &:hover,
+        &.active {
+            color: variables.$primary-color;
+            background-color: variables.$navbar-link-hover-bg-color;
+            border-radius: variables.$border-radius-small;
+        }
+    }
+}
+
+.navbar-logo {
+    height: 2.5em;
+    vertical-align: middle;
+    margin-right: 0.5em;
+}
+
+/* Estilos para la Sección Hero */
+
+.my-5 {
+    color: variables.$primary-color;
+    text-align: center;
+    text-shadow: variables.$text-shadow;
+    opacity: 0; 
+    animation: fadeInSlideUp 1.5s ease-out forwards; 
+}
+
+.hero-section {
+    h1 {
+        font-size: variables.$font-size-hero-h1;
+        margin-bottom: variables.$font-size-base;
+        text-align: center;
+        color: variables.$primary-color;
+        background-color: variables.$hero-bg-color;
+        border-radius: variables.$border-radius-medium;
+    }
+
+    &.hero-section h1 {
+        text-align: center;
+    }
+
+    .lead {
+        font-size: variables.$font-size-hero-lead;
+        color: variables.$secondary-color;
+    }
+
+    ul {
+        list-style-type: none;
+        padding-left: 0;
+    }
+}
+
+/* Estilos para la Sección "Nuestro Equipo Técnico" */
+.filosofia-titulo {
+    text-align: left;
+    font-size: variables.$font-size-filosofia-titulo;
+    color: variables.$primary-color;
+    text-shadow: variables.$text-shadow;
+    margin-bottom: variables.$font-size-base;
+    opacity: 0; 
+    animation: fadeInSlideUp 1.5s ease-out forwards 0.3s;
+}
+
+.PP {
+    font-size: variables.$font-size-base;
+    text-align: left;
+    color: variables.$secondary-color;
+    list-style-type: none;
+}
+
+/* Estilos para las Tarjetas */
+.featured-section .card {
+    border: none;
+    box-shadow: variables.$card-box-shadow;
+    transition: variables.$transition-card;
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: variables.$card-hover-box-shadow;
+        background-color: variables.$card-hover-bg-color;
+    }
+
+    .card-title {
+        font-size: variables.$font-size-card-title;
+        font-weight: bold;
+        margin-bottom: 0.75rem;
+    }
+}
+
+.featured-section py-4 {
+    text-align: center;
+}
+
+
+/* Estilos para la Sección "Servicios que Ofrecemos" */
+.services-section {
+    h2 { 
+        opacity: 0;
+        animation: fadeInSlideUp 1.5s ease-out forwards 0.6s; 
+    }
+
+    .service-item {
+        img {
+            max-height: 300px;
+            object-fit: cover;
+            border-radius: variables.$border-radius-medium;
+        }
+
+        h3 {
+            color: #051525;
+            margin-bottom: variables.$font-size-base;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+    }
+}
+
+.card-img-top {
+    max-height: 250px;
+    object-fit: fill;
+    border-radius: variables.$border-radius-medium variables.$border-radius-medium 0 0;
+}
+
+
+/* Estilos para la Sección "Nuestro Portafolio de Clientes" */
+.portfolio-section {
+    h2 { 
+        opacity: 0; 
+        animation: fadeInSlideUp 1.5s ease-out forwards 0.9s; 
+    }
+}
+
+
+/* Estilos para la Sección "¿Necesitás asistencia? ¡Estamos para ayudarte!" */
+.contact-hero-section {
+    h1 {
+        color: variables.$primary-color;
+        margin-bottom: 1.5rem;
+        opacity: 0;
+        animation: fadeInSlideUp 1.5s ease-out forwards 1.2s; 
+    }
+
+    p {
+        color: variables.$secondary-color;
+        margin-bottom: variables.$font-size-base;
+    }
+}
+
+
+.contact-form-section {
+    background-color: variables.$light-gray;
+    padding: variables.$padding-form-section;
+    border-radius: variables.$border-radius-medium;
+    box-shadow: variables.$card-box-shadow;
+    margin-top: 0rem;
+
+    .form-label {
+        font-weight: bold;
+    }
+}
+
+/* Estilos para el Footer */
+.footer {
+    bottom: 0;
+    width: 100%;
+    background-color: variables.$footer-dark-bg;
+    padding: 0 0;
+    text-align: center;
+    position: fixed;
+    text-justify: auto;
+    color: variables.$light-gray; 
+}
+
+
+/* Estilos para iconos de redes sociales en el footer */
+.footer-social-icons {
+    margin-top: variables.$footer-icons-margin-top;
+    text-align: center;
+
+    a {
+        display: inline-block;
+        margin: 0 variables.$footer-icons-margin-horizontal;
+        text-decoration: none;
+
+        img {
+            height: variables.$footer-icon-height;
+            width: auto;
+            opacity: 0.7;
+            transition: variables.$transition-icon-opacity;
+        }
+
+        &:hover img {
+            opacity: 1.0;
+        }
+    }
+}
+
+/* Definición de la animación Fade-in y Slide-up */
+@keyframes fadeInSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px); 
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Media Queries*/
+@include mixins.mobile-styles {
+    .hero-section {
+        h1 {
+            font-size: variables.$font-size-mobile-h1;
+        }
+    }
+
+    .navbar-brand {
+        font-size: variables.$font-size-mobile-nav-brand;
+    }
+
+    .navbar-nav {
+        .nav-link {
+            margin-left: 0;
+            text-align: center;
+        }
+    }
+}

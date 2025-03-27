@@ -1,0 +1,237 @@
+@charset "UTF-8";
+/* Estilos Generales */
+html {
+  height: 100%;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  color: #333;
+  background-color: #f8f9fa;
+  margin: 0;
+  min-height: 100%;
+  padding-bottom: 60px;
+  padding-top: 60px;
+}
+
+main {
+  flex: 1;
+}
+
+/* Estilos para el header*/
+/* Estilos para la Navbar*/
+.header .navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-image: linear-gradient(to left, #5d5b5f, #ffffff);
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-shadow: 4px 4px 8px #888888;
+}
+
+.navbar-nav .nav-link {
+  margin-left: 15px;
+  color: #030303;
+}
+.navbar-nav .nav-link:hover, .navbar-nav .nav-link.active {
+  color: #007bff;
+  background-color: rgb(48, 47, 47);
+  border-radius: 0.25rem;
+}
+
+.navbar-logo {
+  height: 2.5em;
+  vertical-align: middle;
+  margin-right: 0.5em;
+}
+
+/* Estilos para la Sección Hero */
+.my-5 {
+  color: #007bff;
+  text-align: center;
+  text-shadow: 4px 4px 8px #888888;
+  opacity: 0;
+  animation: fadeInSlideUp 1.5s ease-out forwards;
+}
+
+.hero-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #007bff;
+  background-color: #e9ecef;
+  border-radius: 0.5rem;
+}
+.hero-section.hero-section h1 {
+  text-align: center;
+}
+.hero-section .lead {
+  font-size: 1.2rem;
+  color: #6c757d;
+}
+.hero-section ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+/* Estilos para la Sección "Nuestro Equipo Técnico" */
+.filosofia-titulo {
+  text-align: left;
+  font-size: 1.8rem;
+  color: #007bff;
+  text-shadow: 4px 4px 8px #888888;
+  margin-bottom: 1rem;
+  opacity: 0;
+  animation: fadeInSlideUp 1.5s ease-out forwards 0.3s;
+}
+
+.PP {
+  font-size: 1rem;
+  text-align: left;
+  color: #6c757d;
+  list-style-type: none;
+}
+
+/* Estilos para las Tarjetas */
+.featured-section .card {
+  border: none;
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+.featured-section .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  background-color: lightgray;
+}
+.featured-section .card .card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.75rem;
+}
+
+.featured-section py-4 {
+  text-align: center;
+}
+
+/* Estilos para la Sección "Servicios que Ofrecemos" */
+.services-section h2 {
+  opacity: 0;
+  animation: fadeInSlideUp 1.5s ease-out forwards 0.6s;
+}
+.services-section .service-item img {
+  max-height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 0.5rem;
+}
+.services-section .service-item h3 {
+  color: #051525;
+  margin-bottom: 1rem;
+}
+.services-section .service-item ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+.services-section .service-item li {
+  margin-bottom: 0.5rem;
+}
+
+.card-img-top {
+  max-height: 250px;
+  -o-object-fit: fill;
+     object-fit: fill;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+/* Estilos para la Sección "Nuestro Portafolio de Clientes" */
+.portfolio-section h2 {
+  opacity: 0;
+  animation: fadeInSlideUp 1.5s ease-out forwards 0.9s;
+}
+
+/* Estilos para la Sección "¿Necesitás asistencia? ¡Estamos para ayudarte!" */
+.contact-hero-section h1 {
+  color: #007bff;
+  margin-bottom: 1.5rem;
+  opacity: 0;
+  animation: fadeInSlideUp 1.5s ease-out forwards 1.2s;
+}
+.contact-hero-section p {
+  color: #6c757d;
+  margin-bottom: 1rem;
+}
+
+.contact-form-section {
+  background-color: #f8f9fa;
+  padding: 3rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.1);
+  margin-top: 0rem;
+}
+.contact-form-section .form-label {
+  font-weight: bold;
+}
+
+/* Estilos para el Footer */
+.footer {
+  bottom: 0;
+  width: 100%;
+  background-color: #1b1b1b;
+  padding: 0 0;
+  text-align: center;
+  position: fixed;
+  text-justify: auto;
+  color: #f8f9fa;
+}
+
+/* Estilos para iconos de redes sociales en el footer */
+.footer-social-icons {
+  margin-top: 1rem;
+  text-align: center;
+}
+.footer-social-icons a {
+  display: inline-block;
+  margin: 0 10px;
+  text-decoration: none;
+}
+.footer-social-icons a img {
+  height: 25px;
+  width: auto;
+  opacity: 0.7;
+  transition: opacity 0.3s ease-in-out;
+}
+.footer-social-icons a:hover img {
+  opacity: 1;
+}
+
+/* Definición de la animación Fade-in y Slide-up */
+@keyframes fadeInSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Media Queries*/
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+  .navbar-nav .nav-link {
+    margin-left: 0;
+    text-align: center;
+  }
+}/*# sourceMappingURL=style.css.map */
